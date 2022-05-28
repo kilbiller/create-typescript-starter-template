@@ -55,7 +55,7 @@ await build({
 	external: ["./node_modules/*"],
 	watch: watch
 		? {
-				async onRebuild(error, result) {
+				onRebuild(error, result) {
 					if (abortController) {
 						abortController.abort();
 					}
