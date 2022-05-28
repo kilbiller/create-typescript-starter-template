@@ -1,0 +1,38 @@
+{
+  "name": "create-typescript-starter-template",
+  "version": "1.0.0",
+  "description": "Starter template for typescript projects",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.15",
+    "pnpm": ">=7"
+  },
+  "scripts": {
+    "start": "node --enable-source-maps bin/index.js",
+    "build": "esbuild src/index.ts --sourcemap --bundle --platform=node --format=esm --external:./node_modules/* --outfile=bin/index.js",
+    "dev": "./build.js --watch",
+    "clean": "rm -rf bin",
+    "lint": "prettier -l src/**/*.{ts,tsx} && eslint src/**/*.{ts,tsx}",
+    "fmt": "prettier --write src/**/*.{ts,tsx}",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc --noEmit",
+    "ci": "pnpm run lint && pnpm run typecheck && pnpm run test"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "esbuild": "^0.14.41",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "execa": "^6.1.0",
+    "jest": "^28.1.0",
+    "meow": "^10.1.2",
+    "prettier": "^2.6.2",
+    "ts-jest": "^28.0.3",
+    "typescript": "^4.7.2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"moduleResolution": "node",
+		"target": "esnext",
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"sourceMap": true,
+		"forceConsistentCasingInFileNames": true,
+		"noUnusedLocals": false,
+		"noImplicitReturns": true,
+		"rootDir": "src",
+		"outDir": "bin",
+		"isolatedModules": true,
+		"esModuleInterop": true
+	},
+	"include": ["src/**/*"]
+}
