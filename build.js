@@ -75,5 +75,5 @@ if (watch) {
 	console.log("Build script is watching files...");
 	abortController = start();
 } else {
-	console.log("Build script finished.");
+	console.log("Build completed successfully.");
 }

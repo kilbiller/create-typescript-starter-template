@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node --enable-source-maps bin/index.js",
-    "build": "esbuild src/index.ts --sourcemap --bundle --platform=node --format=esm --external:./node_modules/* --outfile=bin/index.js",
+    "build": "./build.js",
     "dev": "./build.js --watch",
     "clean": "rm -rf bin",
     "lint": "prettier -l src/**/*.{ts,tsx} && eslint src/**/*.{ts,tsx}",
